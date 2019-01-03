@@ -1,5 +1,4 @@
 Install all required python modules and chrome driver.
 Start createcsv.py to create csv file with names and email addresses.
-You can use readcsv.py , notepadtest.py to test your message and list.
 Edit gmailsend.py and add your own gmail id and password before running the code.
 See comments to guide you.
