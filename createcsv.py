@@ -9,7 +9,7 @@ def adresswriter(name,email):
 x=0
 while 1==1:
     em=input('enter email address: ')
-    nm=input('enter name/name: ')
+    nm=input('enter name/names: ')
     adresswriter(nm,em)
     x=x+1
     print('No of entries={number}'.format(number=x))
