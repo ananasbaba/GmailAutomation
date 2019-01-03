@@ -64,14 +64,14 @@ with open('data.csv', 'r') as f:
  
         rowNr = rowNr + 1
  
-print(names)
-print(emails)
+#print(names)
+#print(emails)
 with open('data.csv',"r") as f:
     reader = csv.reader(f,delimiter = ",")
     data = list(reader)
     row_count = len(data)
 
-print('no if rows={rows}'.format(rows=row_count))
+#print('no if rows={rows}'.format(rows=row_count))
 
 
 
@@ -112,7 +112,7 @@ while x<=row_count:
     #idd=id1
     subj='Job Application'
     naaam=names[x]
-    print(emails[x],names[x])
+    #print(emails[x],names[x])
 
     application=("""
     Dear {naam},
@@ -139,6 +139,9 @@ while x<=row_count:
     msgbody_field=driver.find_elements_by_xpath('//*[@aria-label="Message Body"]')
     msgbody_field[1].click()
     msgbody_field[1].send_keys(application)
+    print('Email sent to {naaam} at: {pata}'.format(naaam=names[x-1],pata=emails[x-1]))
+    print('No of emails sent={no}'.format(no=x))
+
     time.sleep(5)
 
     ActionChains(driver).key_down(Keys.CONTROL).key_down(Keys.ENTER).key_up(Keys.CONTROL).key_up(Keys.ENTER).perform()
